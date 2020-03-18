@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Country Picker</h2>
+    <p>Please select the country:</p>
+    <p-dropdown [options]="countries"
+                [(ngModel)]="selectedCountry"
+                filter="true"
+                scrollHeight="800px"
+                filterBy="value,label"
+                [style]="{'width':'300px'}"
+                resetFilterOnHide="true">
+        <ng-template let-item pTemplate="selectedItem">
+            <img src="assets/countries/{{item.label}}.png" style="width:20px;vertical-align:middle"/>
+            <span style="vertical-align:middle; margin-left: .5em">{{item.value}}</span>
+        </ng-template>
+        <ng-template let-country pTemplate="item">
+            <div>
+                <img src="assets/countries/{{country.label}}.png" style="width:24px;vertical-align:middle"/>
+                <div style="font-size:14px;float:right;margin-top:4px">{{country.value}}</div>
+            </div>
+        </ng-template>
+    </p-dropdown>
+    <p>Selected Country: {{selectedCountry || 'none'}}</p>
+</div>
+
+
+
+
