@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {SelectItem} from 'primeng/api';
 import {CountriesService} from '../../services/countries.service';
 import {COUNTRIES_CONFIG0} from '../../config/countriesConfig';
@@ -10,19 +10,14 @@ import {COUNTRIES_CONFIG0} from '../../config/countriesConfig';
   styleUrls: ['./country-picker.component.css']
 })
 export class CountryPickerComponent implements OnInit {
-  selectedCountry = 'Afghanistan';
-  countries: SelectItem[];
+  @Input() selectedCountry: string;
+  @Input() options: SelectItem[];
 
-  constructor(private service: CountriesService) {
-    this.countries = service.getAllCountries().map((_) => {
-      return {
-        label: 'flag-of-' + _.name,
-        value: _.name
-      };
-    });
+  constructor() {
   }
 
   ngOnInit(): void {
   }
 
 }
+

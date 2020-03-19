@@ -11,7 +11,9 @@ import { AppComponent } from './app.component';
 import { CountryPickerComponent } from './components/country-picker/country-picker.component';
 
 import { CountriesService } from './services/countries.service';
-
+import { PageOneComponent } from './components/page-one/page-one.component';
+import { PageTwoComponent } from './components/page-two/page-two.component';
+import { PageThreeComponent } from './components/page-three/page-three.component';
 
 @NgModule({
     imports: [
@@ -29,6 +31,9 @@ import { CountriesService } from './services/countries.service';
     declarations: [
         AppComponent,
         CountryPickerComponent,
+        PageOneComponent,
+        PageTwoComponent,
+        PageThreeComponent,
     ],
     providers: [CountriesService],
     bootstrap: [ AppComponent ]

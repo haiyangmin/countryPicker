@@ -1128,11 +1128,11 @@ export class CountriesService {
   constructor() {
   }
 
-  getAllCountries() {
-    return countries;
-  }
-
-  getCountriesByConfig(countriesConfig) {
-    return countries.filter((_) => countriesConfig.includes(_.name));
+  getCountriesByConfig(countriesConfig = []) {
+    if (countriesConfig.length === 0) {
+      return countries;
+    } else {
+      return countries.filter((_) => countriesConfig.includes(_.name));
+    }
   }
 }

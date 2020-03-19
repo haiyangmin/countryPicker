@@ -25,12 +25,6 @@ export const COUNTRIES_CONFIG0 = [
 
 
 export const COUNTRIES_CONFIG1 = [
-  'Afghanistan',
-  'Albania',
-  'Algeria',
-  'Andorra',
-  'Angola',
-  'Antigua',
   'Argentina',
   'Armenia',
   'Azerbaijan',
