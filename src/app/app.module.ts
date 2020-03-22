@@ -5,15 +5,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DropdownModule} from 'primeng/dropdown';
+import {UpgradeModule} from '@angular/upgrade/static';
 
 import { AppRoutes } from './app.routes';
 import { AppComponent } from './app.component';
 import { CountryPickerComponent } from './components/country-picker/country-picker.component';
-
 import { CountriesService } from './services/countries.service';
 import { PageOneComponent } from './components/page-one/page-one.component';
 import { PageTwoComponent } from './components/page-two/page-two.component';
 import { PageThreeComponent } from './components/page-three/page-three.component';
+
+import { sampleAppModuleAngularJS } from '../app-js/app.angularjs.module';
+
 
 @NgModule({
     imports: [
@@ -27,6 +30,7 @@ import { PageThreeComponent } from './components/page-three/page-three.component
         DropdownModule,
         FormsModule,
         HttpClientModule,
+        UpgradeModule
     ],
     declarations: [
         AppComponent,
@@ -38,4 +42,6 @@ import { PageThreeComponent } from './components/page-three/page-three.component
     providers: [CountriesService],
     bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+    constructor(private upgrade: UpgradeModule) { }
+}
