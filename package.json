@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -19,9 +19,13 @@
     "url": "https://github.com/haiyangmin/countryPicker.git"
   },
   "dependencies": {
+    "@angular-devkit/build-angular": "~0.900.3",
     "@angular/animations": "~9.0.2",
+    "@angular/cdk": "~9.1.0",
+    "@angular/cli": "~9.0.2",
     "@angular/common": "~9.0.2",
     "@angular/compiler": "~9.0.2",
+    "@angular/compiler-cli": "~9.0.0",
     "@angular/core": "~9.0.2",
     "@angular/forms": "~9.0.2",
     "@angular/platform-browser": "~9.0.2",
@@ -31,15 +35,12 @@
     "angular": "^1.5.11",
     "angular-resource": "^1.5.11",
     "angular-route": "^1.5.11",
+    "express": "^4.17.1",
     "primeicons": "2.0.0",
     "primeng": "^9.0.0",
     "rxjs": "~6.5.3",
     "web-animations-js": "^2.3.2",
-    "zone.js": "~0.10.2",
-    "@angular/cli": "~9.0.2",
-    "@angular/compiler-cli": "~9.0.0",
-    "@angular-devkit/build-angular": "~0.900.3",
-    "@angular/cdk": "~9.1.0"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular/language-service": "~9.0.0",

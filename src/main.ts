@@ -5,7 +5,7 @@ import * as angular from 'angular';
 import { setAngularJSGlobal } from '@angular/upgrade/static';
 
 import './app-js/app.angularjs.module';
-import './app-js/sample';
+import './app-js/sample/sample.module';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
